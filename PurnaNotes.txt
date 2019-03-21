@@ -1,0 +1,10 @@
+<button id="" type="button" class="btn--nowrap btn btn--secondary" data-ng-click="control.action()" data-ng-class="{
+                            'btn btn--secondary': control.button === 'secondary',
+                            'btn btn--dismiss': control.button === 'tertiary',
+                            'btn btn--dismiss btn--dismiss--inverse': control.button === 'tertiary' &amp;&amp; vm.isNaked,
+                            'btn btn--phony btn--phony--padded': !control.button
+                        }" tabindex="0">
+                        <span data-ng-class="{ 'anchor': !control.button }" class="ng-binding">
+                            Add
+                        </span>
+                    </button>

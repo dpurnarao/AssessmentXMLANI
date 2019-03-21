@@ -1,0 +1,67 @@
+#
+# Cloud Registry
+#
+cloudRegistry.provider=XML
+cloudRegistry.fileName=../AllstateOnlineSales/cloudRegistry.xml
+cloudRegistry.cloudUnderTest=local
+
+#
+# Application Registry
+#
+applicationRegistry.provider=XML
+applicationRegistry.fileName=../AllstateOnlineSales/applicationRegistry.xml
+applicationRegistry.applicationUnderTest=AOS.com
+
+
+#
+# Artifact Production
+# 
+artifactProducer.provider=Perfecto
+artifactProducer.parentFolder=test-output
+#artifactProducer.automated=EXECUTION_REPORT_XML,FAILURE_SOURCE,DEVICE_LOG
+artifactProducer.automated=EXECUTION_REPORT_HTML,FAILURE_SOURCE,CONSOLE_LOG,WCAG_REPORT,EXECUTION_RECORD_CSV,EXECUTION_RECORD_HTML,REPORTIUM
+
+
+#
+# Page Object Configuration
+#
+pageManagement.siteName=AOS.com
+pageManagement.provider=XML
+pageManagement.fileName=../AllstateOnlineSales/AOSpageElements.xml
+pageManagement.pageData.provider=EXCEL
+#pageManagement.pageData.provider=XML
+pageManagement.pageData.fileName=../AllstateOnlineSales/TestData.xlsx
+#pageManagement.pageData.fileName=../AllstateOnlineSale/AOSpageData.xml
+pageManagement.pageData.tabNames=Testcases,Welcome,VehicleDetails,DriverInformation,Accidents,AdditionalInformation,FinalDetails,QuoteAuto,QuoteRenter,RentersInfo,Discounts,Payment
+
+#
+# Device Management
+#
+#deviceManagement.provider=RESERVED - NAMED - AVAILABLE  CSV
+deviceManagement.provider=XML
+#deviceManagement.driverType=WEB
+deviceManagement.fileName=../AllstateOnlineSales/deviceRegistry.xml
+deviceManagement.deviceList=993D2637D711ECC94E9895747476481EA1D7642D
+#06157DF6535B383F,B94F3B24D287B164AD3BD427A7294EDD60BD46A3
+#deviceManagement.provider=NAMED
+deviceManagement.driverType=WEB
+#deviceManagement.fileName=03CFD89423C2CD4A
+
+#
+# Driver Configuration
+#
+driver.frameworkType=XML
+driver.configName=../AllstateOnlineSales/AOSTests.xml
+
+
+# Config for implicit waits
+driver.propertyAdapters=org.xframium.device.property.SeleniumPropertyAdapter
+selenium.timeouts.implicitWait=60000
+#60000
+selenium.timeouts.pageLoad=60000
+selenium.timeouts.setScript=30000
+
+# keywords integration
+#
+#integrations.import=integrations.allstate
+#integrations.allstate.initialization=com.allState.testDriver.KeywordInitializer

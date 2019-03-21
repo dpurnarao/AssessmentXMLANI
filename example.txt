@@ -1,0 +1,30 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class SeleniumActivity {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.setProperty("webdriver.chrome.driver","C:\\ETRM Training\\chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver", "C:\ETRM Training\\IEdriverServer.exe")
+		
+		WebDriver driver = new ChromeDriver();
+				driver.get("https://purchase.allstate.com/onlinesalesweb/app/auto/");
+		
+				driver.manage().window().maximize();
+				
+				driver.findElement(By.id("first_name")).sendKeys("Keith");
+				driver.findElement(By.xpath("//input[@data-valtype='middlename']")).sendKeys("J");
+				driver.findElement(By.id("last_name")).sendKeys("Shiels");
+				driver.findElement(By.id("date_of_birth")).sendKeys("01011956");
+				driver.findElement(By.id("mailing_address")).sendKeys("High Road");
+				driver.findElement(By.xpath("//input[@data-valtype='aptunit']")).sendKeys("3a");
+				driver.findElement(By.id("city")).sendKeys("New York");
+				driver.findElement(By.id("state")).sendKeys("NY");
+	}
+
+INSURANCE_HISTORY_PAGE
+
+DISCOUNT_PAGE

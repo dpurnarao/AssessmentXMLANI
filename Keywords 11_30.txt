@@ -1,0 +1,96 @@
+			<!-- Attribute Keyword Demo -->
+			<step name="FirstName" type="ATTRIBUTE" page="WelcomeQuote" context="AttributeDemo" failureMode="IGNORE">
+				<parameter type="STATIC" value= "sean"/>
+				<parameter type="STATIC" value= "value"/>
+			</step>
+			
+			<!-- AT Keyword Demo -->
+			<step name="FirstName" type="AT" page="WelcomeQuote" context="ATDemo" />
+			
+			<step type="REPORT" name="First Name height on  " page="WelcomeQuote Page is">
+		 		<parameter type="CONTEXT" value="ATDemo.height" />
+	 		</step>
+	 		
+	 		<step type="REPORT" name="First Name width on  " page="WelcomeQuote Page is">
+		 		<parameter type="CONTEXT" value="ATDemo.width" />
+	 		</step>
+	 		
+	 		<step type="REPORT" name="First Name x coord on  " page="WelcomeQuote Page is">
+		 		<parameter type="CONTEXT" value="ATDemo.x" />
+	 		</step>
+	 		
+	 		<step type="REPORT" name="First Name y coord on  " page="WelcomeQuote Page is">
+		 		<parameter type="CONTEXT" value="ATDemo.y" />
+	 		</step>
+	 		
+	 		<!-- EXECJS Demo -->
+	 		<!-- <step type="EXECJS" name="First Name height on  " page="WelcomeQuote Page is">
+		 		<parameter type="STATIC" value="alert('HI PAUL');" />
+	 		</step> -->
+	 		
+	 		
+	 		<!-- Compare Demo -->
+	 		
+	 		<step name="FirstName" page="WelcomeQuote" type="COMPARE" failureMode="IGNORE">   
+	         	<parameter type="CONTEXT" value="ATDemo.x" />
+	         	<parameter type="STATIC" value="140" />
+	         	
+	         	<step type="REPORT" name="X coord matched as expected " page="WelcomeQuote Page is"/>
+	         	
+	         	<step name="elseCondition" type="ELSE" page="WelcomeQuote">
+	         		<step type="REPORT" name="X coords didnt match as expected " page="WelcomeQuote Page is"/>
+	         	</step>
+
+         	</step>
+         	
+         	<step name="FirstName" page="WelcomeQuote" type="COMPARE" failureMode="IGNORE">   
+	         	<parameter type="CONTEXT" value="ATDemo.x" />
+	         	<parameter type="STATIC" value="141" />
+	         	
+	         	<step type="REPORT" name="X coords matched as expected " page="WelcomeQuote Page is"/>
+	         	
+	         	<step name="elseCondition" type="ELSE" page="WelcomeQuote">
+	         		<step type="REPORT" name="X coords didnt match as expected " page="WelcomeQuote Page is"/>
+	         	</step>
+
+         	</step>
+         	
+         	
+         	<step name="MI" page="WelcomeQuote" type="COMPARE" failureMode="IGNORE" inverse="true">  
+				<parameter type="DATA" value="Welcomepage.Middle" />
+	         	<parameter type="STATIC" value="" />
+	         	
+	         	<step name="MI" type="SET" page="WelcomeQuote">
+					<parameter type="DATA" value= "Welcomepage.Middle"/>
+				</step> 
+	         	
+
+         	</step>
+         	
+         	
+         	<step name="MI" page="WelcomeQuote" type="COMPARE" failureMode="IGNORE" inverse="true">  
+				<parameter type="DATA" value="Welcomepage.Middle" />
+	         	<parameter type="STATIC" value="" />
+	         	
+	         	<step name="MI" page="WelcomeQuote" type="COMPARE" failureMode="IGNORE">  
+					<parameter type="DATA" value="Welcomepage.Middle" />
+		         	<parameter type="STATIC" value="YES" />
+		         	
+		         		<step name="YesOption" type="CLICK" page="WelcomeQuote">
+	         	
+		         	<step name="elseCondition" type="ELSE" page="WelcomeQuote">
+		         		<step name="NoOption" type="CLICK" page="WelcomeQuote">
+		         	</step>
+	         	
+	         	</step>
+	         	
+
+         	</step>
+         	
+         	
+         	
+        <!--  	<step name="FirstName" page="WelcomeQuote" type="COMPARE" failureMode="IGNORE">   
+	         	<parameter type="CONTEXT" value="ATDemo.x" />
+	         	<parameter type="STATIC" value="140" />
+         	</step> -->
+	 		

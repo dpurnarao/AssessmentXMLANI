@@ -1,0 +1,200 @@
+First Name = $x("//label[@for='first_name']")
+First Name textbox = $x("//input[@id='first_name']")
+MI = $x("//label[@for='middle_initial']")
+MI textbox = $x("//input[@id='middle_initial']")
+Last Name = $x("//label[@for='last_name']")
+Last Name textbox = $x("//input[@id='zip']")
+
+$x("//input[@id='first_name']")
+
+driver.findElement(By.xpath("//input[@id='first_name']"));
+
+
+
+<step name="" type="" page=""></step>   
+<parameter type="" value=""/>
+
+<step name="FIRST_NAME" type="COMPARE" page="AOSales" context="FirstNameLocation">
+		<parameter type="CONTEXT" value="FirstNameLocation.width"/>
+	</step>
+MIDDLE_INITIAL 509 	10:20:36 (0ms)	Information
+MIDDLE_INITIAL 411 	10:20:36 (0ms)	Information
+MIDDLE_INITIAL 44 	10:20:36 (0ms)	Information
+MIDDLE_INITIAL 140 
+
+LAST_NAME 45 	13:28:13 (0ms)	Information
+LAST_NAME 500 	13:28:13 (0ms)	Information
+LAST_NAME 44 	13:28:13 (0ms)	Information
+LAST_NAME 294 
+
+.FIRST_NAME,LAST_NAME,MIDDLE_INITIAL,SUFFIX,DATE_OF_BIRTH,STREET_ADDRESS,UNIT_NO,CITY,STATE,ZIP
+
+<record name="AOSales_Test#" FIRST_NAME="Cristiano" LAST_NAME="Ronaldo" MIDDLE_INITIAL="B" SUFFIX="Sr." DATE_OF_BIRTH="" STREET_ADDRESS="" UNIT_#="" CITY="" STATE="" ZIP=""/>
+
+<function name="funktion"></function>
+	
+	<test name="DemoTest" active="true" dataProvider="AOSales.AOSales_Test1">
+	<step name="funktion" type="CALL"/>
+	
+	<step name="FIRST_NAME" type="SET" page="AOSales">
+		<parameter type="DATA" value="AOSales.FIRST_NAME"/>
+	</step>
+	
+	<step name="FIRST_NAME" type="AT" page="AOSales" context="FirstNameLocation"/>
+	
+	<step name="FIRST_NAME" type="REPORT" page="AOSales" context="FirstNameLocation">
+		<parameter type="CONTEXT" value="FirstNameLocation.x"/>
+	</step>
+	
+	<step name="FIRST_NAME" type="REPORT" page="AOSales" context="FirstNameLocation">
+		<parameter type="CONTEXT" value="FirstNameLocation.y"/>
+	</step>
+	
+	<step name="FIRST_NAME" type="REPORT" page="AOSales" context="FirstNameLocation">
+		<parameter type="CONTEXT" value="FirstNameLocation.height"/>
+	</step>
+	
+	<step name="FIRST_NAME" type="REPORT" page="AOSales" context="FirstNameLocation">
+		<parameter type="CONTEXT" value="FirstNameLocation.width"/>
+	</step>
+	
+	<step name="FIRST_NAME" type="COMPARE" page="AOSales" context="FirstNameLocation">
+		<parameter type="STATIC" value="45"/>
+		<parameter type="CONTEXT" value="FirstNameLocation.x"/>
+	</step>
+	
+	<step name="FIRST_NAME" type="COMPARE" page="AOSales" context="FirstNameLocation">
+		<parameter type="STATIC" value="411"/>
+		<parameter type="CONTEXT" value="FirstNameLocation.y"/>
+	</step>
+	
+	<step name="FIRST_NAME" type="COMPARE" page="AOSales" context="FirstNameLocation">
+		<parameter type="STATIC" value="44"/>
+		<parameter type="CONTEXT" value="FirstNameLocation.height"/>
+	</step>
+	
+	<step name="FIRST_NAME" type="COMPARE" page="AOSales" context="FirstNameLocation">
+		<parameter type="STATIC" value="449"/>
+		<parameter type="CONTEXT" value="FirstNameLocation.width"/>
+	</step> 
+	
+	<step name="LAST_NAME" type="SET" page="AOSales">
+		<parameter type="DATA" value="AOSales.LAST_NAME"/>
+	</step>
+	
+	<step name="LAST_NAME" type="AT" page="AOSales" context="LastNameLocation"/>
+	
+	<step name="LAST_NAME" type="REPORT" page="AOSales" context="LastNameLocation">
+		<parameter type="CONTEXT" value="LastNameLocation.x"/>
+	</step>
+	
+	<step name="LAST_NAME" type="REPORT" page="AOSales" context="LastNameLocation">
+		<parameter type="CONTEXT" value="LastNameLocation.y"/>
+	</step>
+	
+	<step name="LAST_NAME" type="REPORT" page="AOSales" context="LastNameLocation">
+		<parameter type="CONTEXT" value="LastNameLocation.height"/>
+	</step>
+	
+	<step name="LAST_NAME" type="REPORT" page="AOSales" context="LastNameLocation">
+		<parameter type="CONTEXT" value="LastNameLocation.width"/>
+	</step>
+	
+	<step name="LAST_NAME" type="COMPARE" page="AOSales" context="LastNameLocation">
+		<parameter type="STATIC" value="45"/>
+		<parameter type="CONTEXT" value="LastNameLocation.x"/>
+	</step>
+	
+	<step name="LAST_NAME" type="COMPARE" page="AOSales" context="LastNameLocation">
+		<parameter type="STATIC" value="500"/>
+		<parameter type="CONTEXT" value="LastNameLocation.y"/>
+	</step>
+	
+	<step name="LAST_NAME" type="COMPARE" page="AOSales" context="LastNameLocation">
+		<parameter type="STATIC" value="44"/>
+		<parameter type="CONTEXT" value="LastNameLocation.height"/>
+	</step>
+	
+	<step name="LAST_NAME" type="COMPARE" page="AOSales" context="LastNameLocation">
+		<parameter type="STATIC" value="294"/>
+		<parameter type="CONTEXT" value="LastNameLocation.width"/>
+	</step>
+	
+	<step name="MIDDLE_INITIAL" type="SET" page="AOSales">
+		<parameter type="DATA" value="AOSales.MIDDLE_INITIAL"/>
+	</step>
+	
+	<step name="MIDDLE_INITIAL" type="AT" page="AOSales" context="MiddleInitialLocation"/>
+	
+	<step name="MIDDLE_INITIAL" type="REPORT" page="AOSales" context="MiddleInitialLocation">
+		<parameter type="CONTEXT" value="MiddleInitialLocation.x"/>
+	</step>
+	
+	<step name="MIDDLE_INITIAL" type="REPORT" page="AOSales" context="MiddleInitialLocation">
+		<parameter type="CONTEXT" value="MiddleInitialLocation.y"/>
+	</step>
+	
+	<step name="MIDDLE_INITIAL" type="REPORT" page="AOSales" context="MiddleInitialLocation">
+		<parameter type="CONTEXT" value="MiddleInitialLocation.height"/>
+	</step>
+	
+	<step name="MIDDLE_INITIAL" type="REPORT" page="AOSales" context="MiddleInitialLocation">
+		<parameter type="CONTEXT" value="MiddleInitialLocation.width"/>
+	</step>
+	
+	<step name="MIDDLE_INITIAL" type="COMPARE" page="AOSales" context="MiddleInitialLocation">
+		<parameter type="STATIC" value="509"/>
+		<parameter type="CONTEXT" value="MiddleInitialLocation.x"/>
+	</step>
+	
+	<step name="MIDDLE_INITIAL" type="COMPARE" page="AOSales" context="MiddleInitialLocation">
+		<parameter type="STATIC" value="411"/>
+		<parameter type="CONTEXT" value="MiddleInitialLocation.y"/>
+	</step>
+	
+	<step name="MIDDLE_INITIAL" type="COMPARE" page="AOSales" context="MiddleInitialLocation">
+		<parameter type="STATIC" value="44"/>
+		<parameter type="CONTEXT" value="MiddleInitialLocation.height"/>
+	</step>
+	
+	<step name="MIDDLE_INITIAL" type="COMPARE" page="AOSales" context="MiddleInitialLocation">
+		<parameter type="STATIC" value="140"/>
+		<parameter type="CONTEXT" value="MiddleInitialLocation.width"/>
+	</step>
+	
+	<step name="SUFFIX" type="SET" page="AOSales">
+		<parameter type="DATA" value="AOSales.SUFFIX"/>
+	</step>
+	
+	<step name="DATE_OF_BIRTH" type="SET" page="AOSales">
+		<parameter type="DATA" value="AOSales.DATE_OF_BIRTH"/>
+	</step>
+	
+	<step name="STREET_ADDRESS" type="SET" page="AOSales">
+		<parameter type="DATA" value="AOSales.STREET_ADDRESS"/>
+	</step>
+	
+	<step name="UNIT_NO" type="SET" page="AOSales">
+		<parameter type="DATA" value="AOSales.UNIT_NO"/>
+	</step>
+	
+	<step name="CITY" type="SET" page="AOSales">
+		<parameter type="DATA" value="AOSales.CITY"/>
+	</step>
+	
+	<step name="STATE" type="SET" page="AOSales">
+		<parameter type="DATA" value="AOSales.STATE"/>
+	</step>
+	
+	<step name="ZIP" type="SET" page="AOSales">
+		<parameter type="DATA" value="AOSales.ZIP"/>
+	</step>
+	
+	<step name="WELCOMEPAGE_CONTINUE" type="CLICK" page="AOSales">
+	</step>
+	
+	<step name="PAUSE" type="WAIT" page="AOSales">
+	<parameter type="STATIC" value="10"/>
+	</step>  
+	 
+	</test>

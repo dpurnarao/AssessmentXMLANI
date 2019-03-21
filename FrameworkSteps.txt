@@ -1,0 +1,26 @@
+1 Clone the github repository
+2 Created project folder in xmldriven
+3 place the registry files Cloud,Device,Application in the folder
+on the c:\
+4 place driverConfig.txt into the same
+5 right click on each file and get relative path. Add path to 
+driverConfig.txt file.
+6 Need to create object repository(pageElements). Copy that to 
+the folder on the c:
+7 right click on the pageElements get the path and add to driverConfig
+8 Give a site name. Which has to be the same as the drrverConfig
+9 create a page and give a pagename. 
+10 create elements. 
+11 Created testcase file.Copy testcase file into the project
+folder on the c:
+12 right click on testcase file and get relative path. Update
+the driverConfig
+13 Add pages from the pageElements file to the model in testCase
+file.
+14 Create run configuration for AS-TESTDRIVER.
+15 Right clicked on the driverConfig and copy the location.
+16 Modified the run configuration and added the path to the argument
+tab.
+17 Launch GRID. DONT CLOSE.
+18 Run your test
+

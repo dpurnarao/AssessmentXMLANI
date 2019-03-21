@@ -1,0 +1,187 @@
+
+From: O'Rourke, Paul
+Sent: Monday, October 17, 2016 5:02 AM
+To: O'Connor, Ronan
+Subject:
+
+<!-- Use the OPEN_PAGE keyword to launch the AOS app -->
+
+                     <step name="FIRST_NAME" page="Welcome" type="OPEN_PAGE" >
+
+                   <parameter type="STATIC" value="https://purchase-stest.allstate.com/onlinesalesweb/app/auto" />
+
+              </step>
+
+             
+
+              <!-- Synchronization block -->
+
+              <step name="FIRST_NAME.VISIBLE" page="Welcome" type="WAIT_FOR" >
+
+                           <parameter type="STATIC" value="60" />
+
+                    </step>
+
+                      
+
+                     <step name="FIRST_NAME" page="Welcome" type="WAIT" >
+
+                           <parameter type="STATIC" value="1" />
+
+                 </step>
+
+                
+
+                 <!-- AT Keyword -->
+
+                
+
+                 <step name="FIRST_NAME" page="Welcome" type="AT" context="context_variable"/>
+
+                
+
+                 <!-- REPORT Keyword -->
+
+                 <step name="FIRST_NAME" page="Welcome" type="REPORT">
+
+                            <parameter type="CONTEXT" value="context_variable.x"/>
+
+                 </step>
+
+                
+
+                 <step name="FIRST_NAME" page="Welcome" type="REPORT">
+
+                            <parameter type="CONTEXT" value="context_variable.y"/>
+
+                 </step>
+
+                
+
+                 <step name="FIRST_NAME" page="Welcome" type="REPORT">
+
+                            <parameter type="CONTEXT" value="context_variable.height"/>
+
+                 </step>
+
+                
+
+                 <step name="FIRST_NAME" page="Welcome" type="REPORT">
+
+                            <parameter type="CONTEXT" value="context_variable.width"/>
+
+                 </step>
+
+                
+
+                 
+
+                 <!-- COMPARE Keyword Match -->
+
+                 <step name="FIRST_NAME" page="Welcome" type="COMPARE">
+
+                            <parameter type="STATIC" value="413"/>
+
+                            <parameter type="CONTEXT" value="context_variable.y"/>
+
+                
+
+                            <step name="FIRST_NAME" page="Welcome" type="REPORT">
+
+                                   <parameter type="STATIC" value="Y Co-ordinate as expected"/>
+
+                            </step>
+
+                 </step>
+
+                
+
+                 <!-- COMPARE Keyword No Match -->
+
+                 <step name="FIRST_NAME" page="Welcome" type="COMPARE" failureMode="LOG_IGNORE">
+
+                            <parameter type="STATIC" value="123"/>
+
+                            <parameter type="CONTEXT" value="context_variable.x"/>
+
+                
+
+                            <step name="FIRST_NAME" page="Welcome" type="REPORT">
+
+                                   <parameter type="STATIC" value="X Co-ordinate as expected"/>
+
+                            </step>
+
+                 </step>
+
+                
+
+                 <!-- COMPARE Keyword No Match failureMode attribute Ignore -->
+
+                 <step name="FIRST_NAME" page="Welcome" type="COMPARE" failureMode="IGNORE">
+
+                            <parameter type="STATIC" value="413"/>
+
+                            <parameter type="CONTEXT" value="context_variable.y"/>
+
+                
+
+                            <step name="FIRST_NAME" page="Welcome" type="REPORT">
+
+                                   <parameter type="STATIC" value="y Co-ordinate as expected"/>
+
+                            </step>
+
+                           
+
+                            <step name="ELSE"  page="Welcome" type="ELSE">
+
+                                   <step name="FIRST_NAME" page="Welcome" type="REPORT">
+
+                                         <parameter type="STATIC" value="Y Co-ordinate NOT as expected"/>
+
+                                   </step>
+
+                            </step>
+
+                 </step>
+
+                
+
+                 <!-- COMPARE Keyword No Match failureMode attribute Ignore -->
+
+               
+
+                 <step name="FIRST_NAME_LABEL" page="Welcome" type="ATTRIBUTE">
+
+                            <parameter type="STATIC" value="First Name"/>
+
+                            <parameter type="STATIC" value="innerHTML"/>
+
+                 </step>
+
+                
+
+                 <step name="FIRST_NAME_LABEL" page="Welcome" type="ATTRIBUTE" context="attribute_innerHTML">
+
+                            <parameter type="STATIC" value="innerHTML"/>
+
+                 </step>
+
+                
+
+                 <step name="InnerHTML value is : " page="Welcome" type="REPORT">
+
+                                   <parameter type="CONTEXT" value="attribute_innerHTML"/>
+
+                            </step>
+
+                
+
+                 <step name="FIRST_NAME_LABEL" page="Welcome" type="ATTRIBUTE">
+
+                            <parameter type="STATIC" value="First name"/>
+
+                            <parameter type="STATIC" value="innerHTML"/>
+
+                 </step>

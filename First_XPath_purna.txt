@@ -1,0 +1,239 @@
+https://purchase-stest.allstate.com/onlinesalesweb/app/auto/
+xframium.org
+
+$x("//input[@id="first_name"]")
+
+$x("//input[@id='first_name']") --- xpath for First Name
+
+
+$x("//input[@id='last_name']") -- xpath for Last Name
+
+mailing_address
+$x("//input[@id='mailing_address']")
+
+$x("//input[@id='city']")
+
+
+$x("//select[@id='state']")
+id="suffix"
+$x("//select[@id='suffix']")
+
+date_of_birth
+$x("//input[@id='date_of_birth']")
+
+apt_unit
+$x("//input[@id='apt_unit']")
+
+button_continue - btnwelcomeStartQuote
+
+$x("//button[@id='btnwelcomeStartQuote']")
+
+//input[@value='byvin']/following-sibling::span[@class='option_icon']
+$("//span[contains( text(),'VIN')]")
+
+Ride for hire
+--------------
+1.preceding-sibling - Yes option button
+$x("//span[@id='vd_ride_for_hire_y'] / preceding-sibling::span[@class='option__icon option__icon--radio']")
+
+$x("//span[@id='vd_ride_for_hire_y']/preceding-sibling::span[@class='option__icon option__icon--radio']")
+
+new car YES xpath
+--------------
+$x("//input[@aria-labelledby='vd_vehicle_purchased vd_vehicle_purchased_yes']/following-sibling::span[@class='option__icon option__icon--radio']")
+
+
+
+2.following-sibling
+$x("//input[@value='Yes'] / following-sibling::span[@class='option__icon option__icon--radio']")
+
+
+2.following-sibling
+$x("//input[@aria-labelledby='vd_ride_for_hire vd_ride_for_hire_y'] / following-sibling::span[@class='option__icon option__icon--radio']")
+
+
+
+1.preceding-sibling - No option selection button
+$x("//span[@id='vd_vehicle_primarily_parked_no'] / preceding-sibling::span[@class='option__icon option__icon--radio']")
+
+$x("//input[@aria-labelledby='vd_ride_for_hire vd_ride_for_hire_n'] / followling-sibling::span[@class='option__icon option__icon--radio']")
+
+XPATH for ADD button on AddVehicle page
+---------------------------------------
+$x("(//span[contains(text(),'Add')]/parent::button)[1]")
+
+
+
+
+XPATH for 2013 Model year
+--------------------------
+$x("//div[@class='select select--lg']/following-sibling::select[@id='v_ymm']")
+
+XPATH for Parked at YES option radio buttion
+---------------------------------------
+$x("//input[@aria-labelledby='vd_vehicle_primarily_parked vd_vehicle_primarily_parked_yes']/following-sibling::span[@id='vd_vehicle_primarily_parked_yes']")
+
+
+XPATH for add more vehicles on Add Vehicle ADD button
+------------------------------------------------------
+$x("//button[@class='btn--nowrap btn btn--secondary']/following-sibling::span[@data-ng-class='{ 'anchor': !control.button }']")
+
+(//span[contains(text(),'Add')]/parent::button)[1]"
+
+XPATH for Contine button on Addmore vehicles page
+------------------------------
+"//button[@id='btncontinueVehicle' and contains(text(),'Continue')]"/>
+
+XPATH for ADD Drivers page elements
+------------------------------
+$X("//span[@id='gender_male']")
+
+MartialStatus
+$x("//select[@name='maritalStatus']/following-sibling::div[@class='select__icon']")
+
+FireFighter
+$x("//select[@id='employment_status']/following-sibling::div[@class='select__icon']")
+
+$x("//input[@aria-labelledby='violations violations_no']/following-sibling::span[@class='option__icon option__icon--radio']")
+
+$x("input[@aria-labelledby='residency_info residency_yes']")/
+
+$x("//input[@name='agreeToReceiveCalls']/following-sibling::span[@class='option__icon']")
+
+$x("//button[@id='btncontinueReviewDriver' and contains(text(),'Continue')]")
+
+
+$x("//input[@id='lst-ib' and contains(text(),'Search')]")
+
+XPATH for Insurance History
+---------------------------
+$x("//input[@name='currentPolicyExpire']/following-sibling::button[@type='button']")
+
+$x("//input[@name='newCoverageStart']/following-sibling::button[@class='ui-datepicker-trigger']")
+
+$x("//button[@id='btncontinueInsuranceHistory' and contains(text(),'Continue')]"/>
+
+ $x("//button[@id='btncontinueInsuranceHistory' and contains(text(),'Continue')]")
+
+$x("//button[@data-ng-click='vm.ContinueClicked(quotePrefOptionsForm.$valid)' and contains(text(),'Continue')]")
+
+$x("//span[@id='ctl02__dd1']/following-sibling::select[@name='ctl02$_dd1$month']")
+
+Payment function
+------
+$x("//div[@class='aspectRatio aspectRatio--paymentIframe ng-pristine ng-valid']/child::iframe
+
+
+<!--  <element name="CardExpiration_MonthSelect" descriptor="XPATH" value="//div[@class='aspectRatio aspectRatio--paymentIframe ng-pristine ng-valid']/child::iframe"/> -->
+      <!--    <element name="CardExpiration_YearSelect" descriptor="XPATH" value="//div[@class='aspectRatio aspectRatio--paymentIframe ng-pristine ng-valid']/child::iframe"/> -->
+          -->
+
+
+$x("//button[@id='btnreview' and contains(text(),'Review')]")
+
+Elements:
+----------------
+
+<element name="first_name_edit" descriptor="ID" value="first_name" />
+
+
+<!-- TEST CASES -->
+	<test name="PurnaTest" active="true">
+	   <step name="first_name_edit" page="Welcome_Page" type="SET">
+	      <parameter type="STATIC" value="Purna"> </parameter>
+	   </step>
+
+
+
+Function
+----------------
+<model>
+	   <page name="Welcome_Page"></page>
+
+	</model>
+
+	<!-- TEST CASES -->
+	<test name="PurnaTest" active="true">
+	
+	   <step name="Allstate-Policydata" page="Welcome_Page" type="CALL"/>
+	   
+	 </test>
+	 
+  <function name="Allstate-Policydata" >
+  
+       <Step name="MAXIMIZE" page="Welcome_Page" type="BROWSER" />
+	   
+	   <step name="first_name_edit" page="Welcome_Page" type="SET">
+	      <parameter type="STATIC" value="Purna"> </parameter>
+	   </step>
+	   
+	   <step name="Initial_txt" page="Welcome_Page" type="SET">
+	      <parameter type="STATIC" value="R"> </parameter>
+	   </step>
+	   
+	   <step name="last_name_edit" page="Welcome_Page" type="SET">
+	      <parameter type="STATIC" value="Davuluri"> </parameter>
+	   </step>
+	   
+	   <step name="Edit_suffix" page="Welcome_Page" type="SET">
+	    <parameter type="STATIC" value="Sr."> </parameter>
+	   </step>
+	   	   
+	   	   <step name="DOB_dat_edit" page="Welcome_Page" type="SET">
+	      <parameter type="STATIC" value="01-06-1982"> </parameter>
+	   </step>
+	   	  
+	   
+	   <step name="Mailing_add_edit" page="Welcome_Page" type="SET">
+	      <parameter type="STATIC" value="LanyonPlace"> </parameter>
+	   </step>
+	   	    
+	   <step name="unit-Num_edit" page="Welcome_Page" type="SET">
+	      <parameter type="STATIC" value="12"> </parameter>
+	   </step>
+	   
+	   <step name="city_edit" page="Welcome_Page" type="SET">
+	      <parameter type="STATIC" value="Belfast"> </parameter>
+	   </step>
+	   
+	   <step name="state_edit" page="Welcome_Page" type="SET">
+	      <parameter type="STATIC" value="IL"> </parameter>
+	   </step>
+	   
+	    <step name="zip_edit" page="Welcome_Page" type="SET">
+	      <parameter type="STATIC" value="60606"> </parameter>
+	   </step>
+	   
+	   <step name="zip_edit" page="Welcome_Page" type="WAIT">
+	      <parameter type="STATIC" value="15"> </parameter>
+	   </step>
+	   
+	   <step name="contine_click" page="Welcome_Page" type="CLICK"/>
+	   
+	   <step name="unit-Num_edit" page="Welcome_Page" type="WAIT">
+	      <parameter type="STATIC" value="15"> </parameter>
+	   </step>
+	</function>
+ 
+    	
+</suite>
+------------------------------------------------------------------------------
+------------------------------------------------------------------------
+ <data>
+     
+   <recordType name="zipCodes" lockRecords="false">
+      <record name="VA" fullName="Virginia" code="22611" />
+      <record name="CO" fullName="Colorado" code="81620" />
+      
+   </recordType>
+   
+  
+ <recordType name="CustomerInfo" lockRecords="false">
+   		<record name="SeanBeard" firsName="Sean" lastName="Beard" />
+   		
+   		<record name="Street" fullName="Str" code="Springview" />
+   		<record name="City" fullName="City" code="Wheeling" />
+   		<record name="Zip" fullName="Zip" code="16226" />
+   		<record name="DOB" fullName="DateOfBirth" code="04-23-1975" />
+   </recordType>
+</data>
